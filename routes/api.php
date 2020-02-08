@@ -27,5 +27,17 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('pays', 'PayController@store');
         Route::put('pays/{id}', 'PayController@update')->where('id','[0-9]+');
         Route::delete('pays/{id}', 'PayController@destroy');
+
+        Route::get('foundings', 'FoundingController@index');
+        Route::get('foundings/{id}', 'FoundingController@show')->where('id','[0-9]+');
+        Route::post('foundings', 'FoundingController@store');
+        Route::put('foundings/{id}', 'FoundingController@update')->where('id','[0-9]+');
+        Route::delete('foundings/{id}', 'FoundingController@destroy');
+
+        Route::get('menus', 'MenuController@index');
+        Route::get('menus/{id}', 'MenuController@show')->where('id','[0-9]+');
+        Route::post('menus', 'MenuController@store');
+        Route::put('menus/{id}', 'MenuController@update')->where('id','[0-9]+');
+        Route::delete('menus/{id}', 'MenuController@destroy');
     // });
 });

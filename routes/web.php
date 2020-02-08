@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/getlogin', function () {
+    return view('auth.login');
+});
+Auth::routes();
+
+Route::resource('donate', 'Web\DonateController')->middleware('auth');
+Route::resource('founding', 'Web\FoundingController')->middleware('auth');
+Route::resource('menu', 'Web\MenuController')->middleware('auth');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');

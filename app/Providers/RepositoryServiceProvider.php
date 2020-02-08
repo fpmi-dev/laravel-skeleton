@@ -11,6 +11,8 @@ class RepositoryServiceProvider extends ServiceProvider
         \App\Repositories\Contracts\UserRepositoryInterface::class => \App\Repositories\UserRepository::class,
         \App\Repositories\Contracts\DonateRepositoryInterface::class => \App\Repositories\DonateRepository::class,
         \App\Repositories\Contracts\PayRepositoryInterface::class => \App\Repositories\PayRepository::class,
+        \App\Repositories\Contracts\FoundingRepositoryInterface::class => \App\Repositories\FoundingRepository::class,
+        \App\Repositories\Contracts\MenuRepositoryInterface::class => \App\Repositories\MenuRepository::class,
     ];
 
     /**
